@@ -1,0 +1,166 @@
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.tab {
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.tab.-active {
+    color: #E5261E;
+    border-bottom: 2px solid #E5261E;
+}
+
+.tab-movies {
+    margin-right: 25px;
+}
+
+.movies {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.movies a {
+    margin-right: 20px;
+    color: #333333;
+    text-decoration: none;
+}
+
+.movies a:last-child {
+    margin-right: 0;
+}
+
+.movie {
+    max-width: 280px;
+    width: 100%;
+}
+
+.movie__info {
+    height: 370px;
+    border-radius: 8px;
+    background: #C4C4C4;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+    margin-bottom: 15px;
+}
+
+.movie__desc {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    background:rgba(51, 51, 51, .8);
+    z-index: 2;
+    transition: top .5s;
+    padding: 15px;
+    font-size: 16px;
+    line-height: 140%;
+    color: #F2F2F2;
+}
+
+.movie__info:hover .movie__desc {
+    top: 0%;
+}
+
+.movie__name {
+    font-size: 20px;
+}
+
+.genres {
+    display: flex;
+}
+
+.genre {
+    border-radius: 6px;
+    box-shadow: inset 0px 0px 16px rgba(0, 0, 0, 0.15);
+    max-width: 280px;
+    width: 100%;
+    margin-right: 20px;
+    height: 210px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    opacity: .8;
+    cursor: pointer;
+}
+
+.genre:hover {
+    opacity: 1;
+}
+
+.genre:last-child {
+    margin-right: 0;
+}
+
+.genre.-comedy {
+    background: linear-gradient(127.83deg, #F2C94C 8.44%, #F29A4A 91.36%);
+}
+
+.genre.-drama {
+    background: linear-gradient(127.83deg, #F2994A 8.44%, #EB5757 91.36%);
+}
+
+.genre.-fantasy {
+    background: linear-gradient(127.83deg, #56CCF2 8.44%, #2F80ED 91.36%);
+}
+
+.genre.-horror {
+    background: linear-gradient(127.83deg, #828282 8.44%, #333333 91.36%);
+}
+
+.genre__logo {
+    font-size: 48px;
+    line-height: 57px;
+    display: block;
+    margin: 80px auto 30px;
+}
+
+.genre__name {
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+
+.channel {
+    border-radius: 8px;
+    background-color: #F2F2F2;
+    display: flex;
+    justify-items: center;
+    margin-bottom: 15px;
+    padding: 20px 140px;
+}
+
+.channel__logo {
+    margin-right: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 115px;
+}
+
+.channel__name {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.program {
+    display: flex;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.program.-active {
+    color: #E5261E;
+}
+
+.program__time {
+    margin-right: 15px;
+}

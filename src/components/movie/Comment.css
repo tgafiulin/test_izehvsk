@@ -1,0 +1,70 @@
+.comments-container {
+    margin-left: 190px;
+}
+
+.comments-header {
+    display: flex;
+    align-items: flex-start;
+}
+
+.comments-input {
+    margin-right: 20px;
+    background: #fbdedd;
+    border-radius: 8px;
+    padding: 16px;
+    font-size: 16px;
+    line-height: 19px;
+    color: #E5261E;
+    border: none;
+    outline: none;
+    resize: none;
+    max-width: 780px;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.comment {
+    max-width: 780px;
+    width: 100%;
+    background: #F2F2F2;
+    border-radius: 8px;
+    padding: 16px;
+    font-size: 16px;
+    line-height: 19px;
+    
+    color: #333333;
+    margin-bottom: 16px;
+    position: relative;
+}
+
+.comment__login {
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.remove-btn {
+    position: absolute;
+    right: -16px;
+    top: 0;
+    height: 15px;
+    transform: translateY(50%);
+}
+
+.remove-btn:hover {
+    cursor: pointer;
+}
+
+.remove-btn:after,
+.remove-btn:before {
+    content: '';
+    position: absolute;
+    background: #E5261E;
+    height: 2px;
+    width: 20px;
+    border-radius: 1px;
+    transform:  rotate(45deg);
+}
+
+.remove-btn:before {
+    transform: rotate(-45deg);
+}

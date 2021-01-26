@@ -1,8 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import loginReducer from './loginReducer';
+import modalReducer from './modalReducer';
+import movieReducer from './movieReducer';
 
 export default configureStore({
   reducer: {
-    counter: counterReducer,
+    login: loginReducer,
+    modal: modalReducer,
+    movie: movieReducer
   },
 });

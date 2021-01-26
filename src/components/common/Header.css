@@ -1,0 +1,63 @@
+.header {
+    margin: 30px 0 50px;
+}
+
+.header__info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+}
+
+.logo__img {
+    margin-right: 10px;
+}
+
+.logo__name {
+    line-height: 36px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.search {
+    display: flex;
+    margin-top: 10px;
+    height: 25px;
+}
+
+.search__input {
+    width: 320px;
+    margin-right: 30px;
+    border: none;
+    outline: 0;
+    border-bottom: 1px solid #333333;
+    font-size: 16px;
+}
+
+.search__input:active {
+    font-weight: 500;
+}
+
+.search__btn {
+    font-family: 'Rubik', sans-serif;
+    color: #E5261E;
+    font-weight: 500;
+    font-size: 16px;
+    border: none;
+    background: transparent;
+}
+
+.auth-header {
+    display: flex;
+    align-items: center;
+}
+
+.auth-header__login {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #333333;
+    margin-right: 15px;
+}

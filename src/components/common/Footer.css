@@ -1,0 +1,28 @@
+.footer {
+    background: #F2F2F2;
+    padding: 30px 0;
+}
+
+.footer__info {
+    display: flex;
+}
+
+.footer__logo {
+    margin-right: 40px;
+}
+
+.company__address {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.company__phones {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.company__cite {
+    text-decoration: none;
+    color: #1F4766;
+    font-weight: 500;
+}

@@ -1,0 +1,35 @@
+.auth {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    line-height: 19px;
+    min-width: 230px;
+}
+
+.auth__input {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #828282;
+    margin-bottom: 24px;
+    padding: 0 0 6px;
+
+    color: #828282;
+}
+
+.auth__check {
+    padding: 0;
+    color: #333333;
+}
+
+.auth__check input {
+    margin: 0 8px 110px 0;
+}
+
+.form__title {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 33px;
+    text-align: center;
+    color: #333333;
+    margin-bottom: 24px;
+}

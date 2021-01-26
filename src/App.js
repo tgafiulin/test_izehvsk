@@ -1,58 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
 import './App.css';
+import { Component } from 'react';
+import Header from './components/common/Header'
+import Footer from './components/common/Footer'
+import Modal from './components/common/Modal'
+import Tabs from './components/main/Tabs'
+import MovieItem from './components/movie/MovieItem'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect
+} from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
-  );
+class App extends Component {
+
+  render () {
+    return (
+      <div className="App">
+        <Router>
+          <Header />
+          <main className="main">
+                <div className="container">
+                  <Switch>
+                    <Route exact path="/">
+                      <Tabs />
+                    </Route>
+                    <Route path="/movie/:id">
+                      <MovieItem />
+                    </Route>
+                    <Redirect to="/" />
+                  </Switch>
+                </div>
+            </main>
+          <Footer />
+          <Modal />
+        </Router>
+      </div>
+    );
+  }
 }
 
 export default App;
