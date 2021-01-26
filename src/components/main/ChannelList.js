@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import Channel from './Channel'
+import ColoredScrollbars from '../common/ColoredScroller';
 
 class ChannelList extends Component {
     constructor(props) {
@@ -94,7 +95,29 @@ class ChannelList extends Component {
                             name: 'Секс в большом городе'
                         }
                     ]
-                }
+                },
+                {
+                    id: 5,
+                    imgSrc: '/images/1st.png',
+                    name: 'Почти Первый канал',
+                    programs: [
+                        {
+                            active: true,
+                            time: '13:00',
+                            name: 'Почти Новости (с субтитрами'
+                        },
+                        {
+                            active: false,
+                            time: '14:00',
+                            name: 'Почти Давай поженимся'
+                        },
+                        {
+                            active: false,
+                            time: '15:00',
+                            name: 'Почти Другие новости'
+                        }
+                    ]
+                },
             ]
         };
     }
@@ -102,13 +125,15 @@ class ChannelList extends Component {
     render() {
         const channels = this.state.channels;
         return (
-            <div className="channels">
-                {channels.map((channel) =>
-                    <Channel 
-                        key={channel.id}
-                        value={channel} />
-                )}
-            </div>
+            <ColoredScrollbars style={{ height: 696 }}>
+                <div className="channels">
+                    {channels.map((channel) =>
+                        <Channel 
+                            key={channel.id}
+                            value={channel} />
+                    )}
+                </div>
+            </ColoredScrollbars>
         )
     }
 }

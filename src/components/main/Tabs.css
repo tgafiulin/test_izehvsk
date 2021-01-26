@@ -127,6 +127,9 @@
     color: #FFFFFF;
 }
 
+.channels {
+    padding-right: 18px;
+}
 
 .channel {
     border-radius: 8px;
@@ -134,7 +137,11 @@
     display: flex;
     justify-items: center;
     margin-bottom: 15px;
-    padding: 20px 140px;
+    padding: 18px 140px;
+}
+
+.channel:last-child {
+    margin-bottom: 0;
 }
 
 .channel__logo {

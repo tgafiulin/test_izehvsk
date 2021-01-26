@@ -1,5 +1,5 @@
 let defaultState = {
-    openModal: true
+    openModal: false
 }
 
 const CLOSE_MODAL = 'CLOSE_MODAL';
