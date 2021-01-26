@@ -49,8 +49,10 @@ function AuthForm () {
                         name="remember"
                         id="remember"
                         checked={remember}
-                        onChange={e => setRemember(e.target.value)}
-                        type="checkbox"/>Запомнить
+                        onChange={e => setRemember(!remember)}
+                        type="checkbox"/>
+                        <span className="auth__checkmark"></span>
+                        Запомнить
                 </label>
                 <input 
                     className="btn" 

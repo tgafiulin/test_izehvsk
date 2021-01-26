@@ -19,10 +19,46 @@
 .auth__check {
     padding: 0;
     color: #333333;
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 110px;
 }
 
 .auth__check input {
-    margin: 0 8px 110px 0;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.auth__checkmark {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    border: 1px solid #333333;
+    box-sizing: border-box;
+    border-radius: 4px;
+    transform: translateY(-50%);
+}
+
+.auth__checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 50%;
+    top: 50%;
+    width: 3px;
+    height: 7px;
+    border: solid #E5261E;
+    border-width: 0 1px 1px 0;
+    transform: translate(-50%, -50%)rotate(45deg);
+}
+
+.auth__check input:checked ~ .auth__checkmark:after {
+    display: block;
 }
 
 .form__title {
