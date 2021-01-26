@@ -1,13 +1,19 @@
-.comments-container {
+.comments {
     margin-left: 190px;
 }
 
-.comments-header {
-    display: flex;
-    align-items: flex-start;
+.comments__title {
+    margin-bottom: 25px;
 }
 
-.comments-input {
+.comments__header {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.comments__input {
     margin-right: 20px;
     background: #fbdedd;
     border-radius: 8px;
@@ -20,11 +26,20 @@
     resize: none;
     max-width: 780px;
     width: 100%;
-    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+.comments__label {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: calc(100% - 800px);
+    color: rgba(0, 0, 0, .5);
 }
 
 .comment {
     max-width: 780px;
+    box-sizing: border-box;
     width: 100%;
     background: #F2F2F2;
     border-radius: 8px;
