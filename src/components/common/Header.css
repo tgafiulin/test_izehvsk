@@ -27,7 +27,7 @@
     height: 25px;
 }
 
-.search__input {
+.input {
     width: 320px;
     margin-right: 30px;
     border: none;
@@ -36,7 +36,11 @@
     font-size: 16px;
 }
 
-.search__input:active {
+.input--login {
+    width: 100px;
+}
+
+.input:active {
     font-weight: 500;
 }
 

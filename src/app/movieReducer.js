@@ -1,4 +1,5 @@
 let defaultState = {
+    searchValue: '',
     movies: [
         {
             id: 1,
@@ -108,16 +109,20 @@ let defaultState = {
 }
 
 const UPDATE_COMMENT = 'UPDATE_COMMENT';
+const UPDATE_SEARCH_VALUE = 'UPDATE_SEARCH_VALUE';
 
 const movieReducer = (state = defaultState, action) => {
     switch (action.type) {
         case UPDATE_COMMENT:
             return {...state, movies: state.movies.map((movie) => movie.id === action.payload.id ? action.payload : movie)}
+        case UPDATE_SEARCH_VALUE:
+            return {...state, searchValue: action.payload}
         default:
             return state
     }
 }
 
 export const updateComment = (payload) => ({type: UPDATE_COMMENT, payload});
+export const updateSearchValue = (payload) => ({type: UPDATE_SEARCH_VALUE, payload});
 
 export default movieReducer;
