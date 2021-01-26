@@ -9,25 +9,25 @@ class GenreList extends Component {
             movies: [
                 {
                     id: 1,
-                    icon: '😁',
+                    icon: '/icon/😁.png',
                     name: 'Комедии',
                     classGenre: '-comedy'
                 },
                 {
                     id: 2,
-                    icon: '😭',
+                    icon: '/icon/😭.png',
                     name: 'Драмы',
                     classGenre: '-drama'
                 },
                 {
                     id: 3,
-                    icon: '👽',
+                    icon: '/icon/👽.png',
                     name: 'Фантастика',
                     classGenre: '-fantasy'
                 },
                 {
                     id: 4,
-                    icon: '👻',
+                    icon: '/icon/👻.png',
                     name: 'Ужасы',
                     classGenre: '-horror'
                 }
