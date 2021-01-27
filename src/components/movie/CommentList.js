@@ -1,8 +1,8 @@
 import './Comment.css'
 import Comment from './Comment'
 import { useState } from 'react'
-import { updateComment } from '../../app/movieReducer'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
+import { useFirestore } from 'react-redux-firebase'
 
 function CommentList (props) {
     const [textComment, editComment] = useState('')
@@ -10,8 +10,7 @@ function CommentList (props) {
     const comments = props.comments
     const movie = props.movie
     const login = useSelector(state => state.login.login)
-
-    const dispatch = useDispatch();
+    const firestore = useFirestore()
 
     const addComment = (e) => {
         e.preventDefault();
@@ -25,7 +24,7 @@ function CommentList (props) {
 
                 let newComments = [newComment, ...movie.comments]
 
-                dispatch(updateComment(Object.assign({}, movie, {comments:newComments, highCommentId: movie.highCommentId + 1})))
+                updateCommentToFireStore(newComments)
                 editComment('')
                 editLabel('')
             } else {
@@ -40,7 +39,15 @@ function CommentList (props) {
         e.preventDefault(); 
         let newComments = movie.comments.filter((comment) => id !== comment.id);
 
-        dispatch(updateComment(Object.assign({}, movie, {comments:newComments})))
+        updateCommentToFireStore(newComments)
+    }
+    
+    function updateCommentToFireStore (newComments) {
+        let db = firestore.collection('movies').doc(movie.id)
+        db.update({
+            comments: newComments, 
+            highCommentId: movie.highCommentId + 1
+        })
     }
 
     return (

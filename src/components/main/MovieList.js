@@ -2,6 +2,7 @@ import Movie from './Movie'
 import { useSelector } from 'react-redux'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useFirestoreConnect } from 'react-redux-firebase'
+import Loader from '../common/Loader'
 
 function MovieList () {
     useFirestoreConnect([
@@ -25,7 +26,7 @@ function MovieList () {
     };
 
     if (!movies) {
-        return 'Минуточку'
+        return <Loader />
     }
 
     return (

@@ -3,6 +3,7 @@ import CommentList from './CommentList'
 import { useSelector } from 'react-redux'
 import { useParams, Link } from "react-router-dom";
 import { useFirestoreConnect } from 'react-redux-firebase'
+import Loader from '../common/Loader'
 
 function MovieItem () {
     let { id } = useParams();
@@ -11,7 +12,7 @@ function MovieItem () {
     ])
     const movies = useSelector((state) => state.firestore.ordered.movies)
     if (!movies) {
-        return 'Минуточку'
+        return <Loader />
     }
     
     const movie = movies.filter((movie) => id === movie.id)[0];
