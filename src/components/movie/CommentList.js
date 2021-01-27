@@ -60,7 +60,7 @@ function CommentList (props) {
             </div>
             {comments.map((comment) =>
                 <Comment 
-                    owner={comment.login === login ? true : false}
+                    owner={(comment.login === login) ? true : false}
                     key={comment.id}
                     handleClick={deleteComment}
                     value={comment} 

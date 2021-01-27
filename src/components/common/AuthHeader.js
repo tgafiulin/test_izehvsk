@@ -38,10 +38,7 @@ function AuthHeader () {
     return (
         <div className="auth-header">
             { loginJsx }
-            { login.length ? 
-                <button className="btn btn--close" onClick={handleLogout}>Выйти</button> 
-                : 
-                <button className="btn" onClick={handleLogin}>Войти</button> }
+            { login.length ?  <button className="btn btn--close" onClick={handleLogout}>Выйти</button> : <button className="btn" onClick={handleLogin}>Войти</button> }
         </div>
     )
 }
