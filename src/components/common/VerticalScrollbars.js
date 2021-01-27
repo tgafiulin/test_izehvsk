@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Scrollbars } from 'react-custom-scrollbars';
 
-export default class ColoredScrollbars extends Component {
+export default class VerticalScrollbars extends Component {
 
     constructor(props, ...rest) {
         super(props, ...rest);
         this.renderThumb = this.renderThumb.bind(this);
-        this.renderTrack = this.renderTrack.bind(this);
+        this.renderTrackVertical = this.renderTrackVertical.bind(this);
     }
 
     renderThumb({ style, ...props }) {
@@ -21,7 +21,7 @@ export default class ColoredScrollbars extends Component {
         );
     }
 
-    renderTrack({ style, ...props }) {
+    renderTrackVertical({ style, ...props }) {
         const trackStyle = {
             backgroundColor: `#F2F2F2`,
             color: 'yellow',
@@ -39,8 +39,8 @@ export default class ColoredScrollbars extends Component {
     render() {
         return (
             <Scrollbars
-                renderThumbVertical={this.renderThumb}
-                renderTrackVertical={this.renderTrack}
+                renderThumb={this.renderThumb}
+                renderTrackVertical={this.renderTrackVertical}
                 {...this.props}/>
         );
     }

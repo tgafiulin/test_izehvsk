@@ -22,21 +22,18 @@
 .movies {
     display: flex;
     margin-bottom: 30px;
+    padding-top: 20px;
+    overflow: hidden;
 }
 
 .movies a {
-    margin-right: 20px;
     color: #333333;
     text-decoration: none;
 }
 
-.movies a:last-child {
-    margin-right: 0;
-}
-
 .movie {
     max-width: 280px;
-    width: 100%;
+    width: 280px;
 }
 
 .movie__info {

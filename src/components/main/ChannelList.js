@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import Channel from './Channel'
-import ColoredScrollbars from '../common/ColoredScroller';
+import VerticalScrollbars from '../common/VerticalScrollbars';
 
 class ChannelList extends Component {
     constructor(props) {
@@ -125,7 +125,7 @@ class ChannelList extends Component {
     render() {
         const channels = this.state.channels;
         return (
-            <ColoredScrollbars style={{ height: 696 }}>
+            <VerticalScrollbars style={{ height: 696 }}>
                 <div className="channels">
                     {channels.map((channel) =>
                         <Channel 
@@ -133,7 +133,7 @@ class ChannelList extends Component {
                             value={channel} />
                     )}
                 </div>
-            </ColoredScrollbars>
+            </VerticalScrollbars>
         )
     }
 }

@@ -35,13 +35,13 @@ function AuthHeader () {
     } else {
         loginJsx = <input value={loginText} onChange={(e) => editLoginText(e.target.value)} onBlur={handleBlur} className="input input--login" />
     }
-
-    let authBtn = login.length ? <button className="btn btn--close" onClick={handleLogout}>Выйти</button> : <button className="btn" onClick={handleLogin}>Войти</button>
-
     return (
         <div className="auth-header">
             { loginJsx }
-            { authBtn }
+            { login.length ? 
+                <button className="btn btn--close" onClick={handleLogout}>Выйти</button> 
+                : 
+                <button className="btn" onClick={handleLogin}>Войти</button> }
         </div>
     )
 }

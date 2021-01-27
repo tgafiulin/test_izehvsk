@@ -47,7 +47,7 @@ function CommentList (props) {
         <div className="comments">
             <h2 className="comments__title">Комментарии</h2>
             <div className="comments__header">
-                <label for="comment" className="comments__label">{label}</label>
+                <label htmlFor="comment" className="comments__label">{label}</label>
                 <textarea id="comment" rows="5" onChange={(e) => editComment(e.target.value)} className="comments__input" value={textComment} />
                 <div className="btn" onClick={addComment}>Опубликовать</div>
             </div>

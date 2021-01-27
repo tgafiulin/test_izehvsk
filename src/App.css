@@ -16,6 +16,7 @@ h2 {
     width: 100%;
     padding: 0 10px;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 button:hover {
@@ -56,4 +57,13 @@ button:hover {
 
 .btn--close:hover {
     background: transparent;
+}
+
+.swiper-wrapper {
+    display: flex;
+}
+
+.swiper-slide {
+    max-width: 280px;
+    width: 100%!important;
 }

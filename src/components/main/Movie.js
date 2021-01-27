@@ -5,13 +5,13 @@ function Movie(props) {
     const url = `/movie/${id}`;
     return (
         <Link to={url}>
-        <div className="movie">
-            <div className="movie__info">
-                <img src={imgSrc} alt="" className="movie__img" />
-                <div className="movie__desc">{desc}</div>
+            <div className="movie">
+                <div className="movie__info">
+                    <img src={imgSrc} alt="" className="movie__img" />
+                    <div className="movie__desc">{desc}</div>
+                </div>
+                <div className="movie__name">{name}</div>
             </div>
-            <div className="movie__name">{name}</div>
-        </div>
         </Link>
     )
 }

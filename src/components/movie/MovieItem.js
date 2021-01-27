@@ -2,12 +2,19 @@ import './MovieItem.css'
 import CommentList from './CommentList'
 import { useSelector } from 'react-redux'
 import { useParams, Link } from "react-router-dom";
+import { useFirestoreConnect } from 'react-redux-firebase'
 
 function MovieItem () {
     let { id } = useParams();
-    const movieId = parseInt(id);
-    const movies = useSelector(state => state.movie.movies);
-    const movie = movies.filter((movie) => movieId === movie.id)[0];
+    useFirestoreConnect([
+        { collection: 'movies' } 
+    ])
+    const movies = useSelector((state) => state.firestore.ordered.movies)
+    if (!movies) {
+        return 'Минуточку'
+    }
+    
+    const movie = movies.filter((movie) => id === movie.id)[0];
 
     return (
         <div>
